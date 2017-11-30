@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jframetester.iml" filepath="$PROJECT_DIR$/.idea/modules/jframetester.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jframetester_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jframetester_main.iml" group="jframetester" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jframetester_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jframetester_test.iml" group="jframetester" />
+    </modules>
+  </component>
+</project>

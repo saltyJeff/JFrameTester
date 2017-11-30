@@ -1,0 +1,29 @@
+group 'io.github.saltyJeff'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'net.lingala.zip4j', name: 'zip4j', version: '1.3.2'
+    compile group: 'info.picocli', name: 'picocli', version: '2.0.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'io.github.saltyJeff.jframetester.Main'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    archiveName = 'jframetester.jar'
+}
+run {
+    main = 'io.github.saltyJeff.jframetester.Main'
+    args = ['-i', file('build/demo/zips').absolutePath, '-o', file('build/demo/pngs').absolutePath, '-c', 'CircleFrame']
+}
